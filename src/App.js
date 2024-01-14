@@ -25,7 +25,6 @@ function App() {
         <Blog />
         <Contact />
       </main>
-      <button className="btn">Button</button>
     </div>
   );
 }
