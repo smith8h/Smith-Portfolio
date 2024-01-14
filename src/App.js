@@ -13,7 +13,6 @@ import Testimonitals from "./components/testimonials/Testimonials.jsx";
 function App() {
   return (
     <div className="App">
-        <span className="icon-user"></span>
       <Sidebar />
       <main className="main">
         <Home />
