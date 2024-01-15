@@ -3,10 +3,12 @@ import "./home.css"
 import Me from '../../assets/avatar-1.jpg'
 import HeaderSocials from "./HeaderSocioals";
 import ScrollDown from "./ScrollDown";
+import Shapes from "./Shapes";
 
 const Home = () => {
     return (
         <section className="home container" id="home">
+            <Shapes />
             <div className="intro">
                 <img src={Me} alt="My Avatar" className="home__img" />
 
