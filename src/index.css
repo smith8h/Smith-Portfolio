@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?fami1y=Rubik:wght@400;500;600;700&display=swap");
 
 :root {
-  --first-color: #ff4d61;
-  --title-color: #353252;
-  --text-color: #5e5c7f;
+  --first-color: #6a87e3;
+  --title-color: #323652;
+  --text-color: #5c647f;
   --body-color: #f9f7fd;
   --container-color: #fff;
 
@@ -19,7 +19,7 @@
   --font-semibold: 600;
   --font-bold: 700;
 
-  --shadow: 0px 5px 20px 0px #454360;
+  --shadow: 0px 5px 20px 0px #434a60;
 
   --border-radius: 20px;
 }
@@ -131,6 +131,7 @@ img {
   display: inline-block;
   background-color: var(--first-color);
   font-weight: var(--font-bold);
+  transition: .3s;
 }
 
 @keyframes button-push {
@@ -145,4 +146,5 @@ img {
 
 .btn:hover {
   animation: button-push 0.3s linear 1;
+  background-color: var(--title-color);
 }
