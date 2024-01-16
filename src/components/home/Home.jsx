@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <section className="home container" id="home">
             
-            <div className="intro">
+            <div className="intro section">
                 <img src={Me} alt="My Avatar" className="home__img avatar" />
 
                 <h1 className="home__name">Hussein Shakir</h1>
