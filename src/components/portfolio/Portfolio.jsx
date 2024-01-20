@@ -3,9 +3,7 @@ import "./portfolio.css";
 import { Menu } from "./Menu";
 
 const Portfolio = () => {
-    const [items, setItems] = useState(() => Menu.filter(element => {
-        return element.category === 'Android';
-    }));
+    const [items, setItems] = useState(() => Menu);
 
     const filterItem = (category) => {
         const updateItems = Menu.filter((curElement) => {
@@ -19,6 +17,7 @@ const Portfolio = () => {
             <h2 className="section__title">Recent Works</h2>
 
             <div className="work__filters">
+                <span className="work__item" onClick={() => setItems(Menu)}>All Works</span>
                 <span className="work__item" onClick={() => filterItem('Android')}>Native Android</span>
                 <span className="work__item" onClick={() => filterItem('Flutter')}>Flutter</span>
                 <span className="work__item" onClick={() => filterItem('Web')}>Front-End</span>
@@ -26,8 +25,8 @@ const Portfolio = () => {
 
             <div className="work__container grid">
                 {items.map(item => {
-                    const { id, image, title, category, link} = item;
-                    return(
+                    const { id, image, title, category, link } = item;
+                    return (
                         <div className="work__card" key={id}>
                             <div className="work__thumb">
                                 <img src={image} alt="Thumbnail" className="work__img" />
