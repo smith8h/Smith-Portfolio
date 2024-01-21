@@ -1,5 +1,5 @@
 .about {
-    position: relative;
+  position: relative;
 }
 
 .about__container {
@@ -12,7 +12,8 @@
 }
 
 .about__description {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
+  text-align: justify;
 }
 
 .about__data {
@@ -38,79 +39,76 @@
   top: 20%;
 }
 
-.about__description {
-  text-align: justify;
-}
-
 .about__skills {
   row-gap: 1.5rem;
 }
 
 .skills__titles {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: .3rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
 }
 
 .skills__name {
-    font-size: var(--normal-font-size);
-    font-weight: var(--font-medium);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
 }
 
 .skills__number {
-    line-height: 1.2;
+  line-height: 1.2;
 }
 
-.skills__bar, .skills__percentage {
-    height: 5px;
-    border-radius: 0.25rem;
+.skills__bar,
+.skills__percentage {
+  height: 5px;
+  border-radius: 0.25rem;
 }
 
 .skills__bar {
-    background-color: #e9e9e9;
+  background-color: #e9e9e9;
 }
 
 .skills__percentage {
-    background-color: #6a87e3;
-    display: block;
+  background-color: #6a87e3;
+  display: block;
 }
 
 .java {
-    width: 99%;
+  width: 99%;
 }
 
 .kotlin {
-    width: 85%;
+  width: 85%;
 }
 
 .dart {
-    width: 99%;
+  width: 99%;
 }
 
 .js {
-    width: 80%;
+  width: 80%;
 }
 
 .python {
-    width: 50%;
+  width: 50%;
 }
 
 .about__boxes {
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 1.875rem;
-    margin-top: 3.25rem;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1.875rem;
+  margin-top: 3.25rem;
 }
 
 .about__box {
-    display: flex;
-    column-gap: 1.5rem;
+  display: flex;
+  column-gap: 1.5rem;
 }
 
 .about__icon {
-    font-size: var(--h1-font-size);
-    color: #dedeea;
+  font-size: var(--h1-font-size);
+  color: #dedeea;
 }
 
 .about__title {
-    font-size: 1.875rem;
+  font-size: 1.875rem;
 }
