@@ -2,6 +2,7 @@ import React from "react";
 import "./about.css";
 import Me from '../../assets/avatar-1.jpg';
 import AboutBox from './AboutBox';
+import PDF from '../../assets/hussein-shakir-resume.pdf';
 
 const About = () => {
     return (
@@ -19,7 +20,7 @@ const About = () => {
                             ⚡ I can work on your project or create your dream project easily.<br />
                             ❤️ I do Coding for a hobby, I just ❤️ programming.
                         </p>
-                        <a href="" className="btn">Download CV</a>
+                        <a href={PDF} className="btn" download={true}>Download CV</a>
                     </div>
                     <div className="about__skills grid">
                         <div className="skills__data">
