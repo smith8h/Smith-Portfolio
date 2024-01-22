@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "./contact.css";
 
 const Contact = () => {
-    var name = '';
-    var email = '';
-    var subject = '';
-    var message = '';
+    let name = '';
+    let email = '';
+    let subject = '';
+    let message = '';
 
     return (
         <section className="contact container section" id='contact'>
