@@ -14,7 +14,7 @@ const Resume = () => {
                             return (
                                 <Card key={id} icon={val.icon} title={val.title} year={val.year} desc={val.desc} />
                             );
-                        }
+                        } else return null;
                     })}
                 </div>
                 <div className="timeline grid">
@@ -23,7 +23,7 @@ const Resume = () => {
                             return (
                                 <Card key={index} icon={val.icon} title={val.title} year={val.year} desc={val.desc} />
                             );
-                        }
+                        } else return null;
                     })}
                 </div>
             </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import "./testimonials.css";
-import Image1 from '../../assets/avatar-2.svg';
 import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
