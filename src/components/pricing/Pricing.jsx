@@ -17,7 +17,7 @@ const Pricing = () => {
                     <h3 className="price">
                         <em>$</em>200 - 400<span>Project</span>
                     </h3>
-                    <a href="mailto:husseinshakir81@gmail.com" className="btn">Get Started</a>
+                    <a href="mailto:panolounisba2016@gmail.com" className="btn">Get Started</a>
                 </div>
                 <div className="pricing__item best">
                     <span className="recommended">Recommended</span>
@@ -28,7 +28,7 @@ const Pricing = () => {
                     <h3 className="price">
                         <em>$</em>400 - 3,100<span>Project</span>
                     </h3>
-                    <a href="mailto:husseinshakir81@gmail.com" className="btn">Get Started</a>
+                    <a href="mailto:panolounisba2016@gmail.com" className="btn">Get Started</a>
                 </div>
                 <div className="pricing__item">
                     <img src={Price3} alt="Price 3" className="pricing__img" />
@@ -38,7 +38,7 @@ const Pricing = () => {
                     <h3 className="price">
                         <em>$</em>3,000 - 11,000<span>Projects</span>
                     </h3>
-                    <a href="mailto:husseinshakir81@gmail.com" className="btn">Get Started</a>
+                    <a href="mailto:panolounisba2016@gmail.com" className="btn">Get Started</a>
                 </div>
             </div>
         </section>
