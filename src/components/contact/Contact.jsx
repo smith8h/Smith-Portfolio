@@ -42,7 +42,7 @@ const Contact = () => {
                     </div>
                     <button className="btn"
                         onClick={() => {
-                            const mail = `mailto:husseinshakir81@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Dear ${name},\n\n${message}\n\nSender ${email}`)}`;
+                            const mail = `mailto:panolounisba2016@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Dear ${name},\n\n${message}\n\nSender ${email}`)}`;
                             window.location.href = mail;
                         }}>Send Message</button>
                 </form>
