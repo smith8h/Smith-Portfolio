@@ -94,9 +94,9 @@ const Home = () => {
                         <i className="icon-cloud-download"></i> Resume
                     </a>
                 </div>
-
-                <ScrollDown />
             </div>
+
+            <ScrollDown />
         </section>
     );
 };

@@ -5,6 +5,8 @@
     align-items: center;
     overflow: hidden;
     min-height: 100vh;
+    padding-bottom: 4rem;
+    /* Safe space for scroll indicator */
 }
 
 /* Background */
@@ -272,8 +274,10 @@
 /* ===== Responsive ===== */
 @media screen and (max-width: 768px) {
     .home {
-        min-height: calc(100vh - 70px);
+        min-height: 110vh;
+        /* Extra height to prevent overlap */
         padding: 0 1rem;
+        padding-bottom: 5rem;
     }
 
     .home__avatar-wrapper {
@@ -298,7 +302,10 @@
     }
 
     .scroll__down {
-        display: none;
+        display: block;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
