@@ -14,7 +14,7 @@ const About = () => {
             <div className="about__container grid">
                 <div className="about__image-col reveal">
                     <div className="about__img-wrapper">
-                        <img src="/assets/avatar.jpg" alt="Hussein Shakir" className="about__img" />
+                        <img src="/assets/me.jpg" alt="Hussein Shakir" className="about__img" />
                         <div className="about__img-border"></div>
                     </div>
                     <div className="about__experience-badge">
