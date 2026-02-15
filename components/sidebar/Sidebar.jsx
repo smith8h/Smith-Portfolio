@@ -1,51 +1,44 @@
+"use client";
+
+import { useState } from "react";
 import "./sidebar.css";
 import Image from "next/image";
 
+const navItems = [
+    { href: "#home", icon: "icon-home", label: "Home" },
+    { href: "#about", icon: "icon-user-following", label: "About" },
+    { href: "#services", icon: "icon-briefcase", label: "Services" },
+    { href: "#resume", icon: "icon-graduation", label: "Resume" },
+    { href: "#portfolio", icon: "icon-layers", label: "Portfolio" },
+    { href: "#blog", icon: "icon-note", label: "Blog" },
+    { href: "#contact", icon: "icon-bubble", label: "Contact" },
+];
+
 const Sidebar = () => {
+    const [activeNav, setActiveNav] = useState("#home");
+
     return (
         <aside className="aside">
-            <a href="#home" className="nav__logo">
-                <Image src="/assets/logo.png" alt="Logo" className="logo" width={30} height={30} />
+            <a href="#home" className="nav__logo" onClick={() => setActiveNav("#home")}>
+                <Image src="/assets/logo.png" alt="Logo" className="logo" width={32} height={32} />
             </a>
 
             <nav className="nav">
                 <div className="nav__menu">
                     <ul className="nav__list">
-                        <li className="nav__item">
-                            <a href="#home" className="nav__link">
-                                <i className="icon-home" />
-                            </a>
-                        </li>
-                        <li className="nav__item">
-                            <a href="#about" className="nav__link">
-                                <i className="icon-user-following" />
-                            </a>
-                        </li>
-                        <li className="nav__item">
-                            <a href="#services" className="nav__link">
-                                <i className="icon-briefcase" />
-                            </a>
-                        </li>
-                        <li className="nav__item">
-                            <a href="#resume" className="nav__link">
-                                <i className="icon-graduation" />
-                            </a>
-                        </li>
-                        <li className="nav__item">
-                            <a href="#portfolio" className="nav__link">
-                                <i className="icon-layers" />
-                            </a>
-                        </li>
-                        <li className="nav__item">
-                            <a href="#blog" className="nav__link">
-                                <i className="icon-note" />
-                            </a>
-                        </li>
-                        <li className="nav__item">
-                            <a href="#contact" className="nav__link">
-                                <i className="icon-bubble" />
-                            </a>
-                        </li>
+                        {navItems.map((item) => (
+                            <li className="nav__item" key={item.href}>
+                                <a
+                                    href={item.href}
+                                    className={`nav__link ${activeNav === item.href ? "nav__link--active" : ""}`}
+                                    onClick={() => setActiveNav(item.href)}
+                                    title={item.label}
+                                >
+                                    <i className={item.icon} />
+                                    <span className="nav__tooltip">{item.label}</span>
+                                </a>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </nav>

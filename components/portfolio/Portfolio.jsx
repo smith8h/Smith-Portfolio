@@ -4,47 +4,57 @@ import { useState } from "react";
 import "./portfolio.css";
 import { Menu } from "./Menu";
 
+const categories = ["All", "Android", "Flutter", "Web"];
+
 const Portfolio = () => {
+    const [activeFilter, setActiveFilter] = useState("All");
     const [items, setItems] = useState(() => Menu);
 
     const filterItem = (category) => {
-        const updateItems = Menu.filter((curElement) => {
-            return curElement.category === category;
-        });
-        setItems(updateItems);
+        setActiveFilter(category);
+        if (category === "All") {
+            setItems(Menu);
+        } else {
+            setItems(Menu.filter((item) => item.category === category));
+        }
     };
 
     return (
         <section className="work container section" id="portfolio">
-            <h2 className="section__title">Recent Works</h2>
-
-            <div className="work__filters">
-                <span className="work__item" onClick={() => setItems(Menu)}>All Works</span>
-                <span className="work__item" onClick={() => filterItem("Android")}>Native Android</span>
-                <span className="work__item" onClick={() => filterItem("Flutter")}>Flutter</span>
-                <span className="work__item" onClick={() => filterItem("Web")}>Front-End</span>
+            <div className="section__header reveal">
+                <h2 className="section__title">
+                    Recent <span className="gradient-text">Works</span>
+                </h2>
+                <span className="section__subtitle">featured projects &amp; libraries</span>
             </div>
 
-            <div className="work__container grid">
-                {items.map(item => {
-                    const { id, image, title, category, link } = item;
-                    return (
-                        <div className="work__card" key={id}>
-                            <div className="work__thumb">
-                                <img src={image} alt="Thumbnail" className="work__img" />
-                                <div className="work__mask"></div>
-                            </div>
+            <div className="work__filters reveal">
+                {categories.map((cat) => (
+                    <button
+                        className={`work__filter-btn ${activeFilter === cat ? "work__filter-btn--active" : ""}`}
+                        key={cat}
+                        onClick={() => filterItem(cat)}
+                    >
+                        {cat}
+                    </button>
+                ))}
+            </div>
 
-                            <span className="work__category">
-                                {category}
-                            </span>
-                            <h3 className="work__title">{title}</h3>
-                            <a href={link} className="work__button" target="__blank">
-                                <i className="icon-link work__button-icon"></i>
-                            </a>
+            <div className="work__container grid reveal">
+                {items.map(({ id, image, title, category, link }) => (
+                    <a href={link} className="work__card glass-card" key={id} target="_blank" rel="noopener noreferrer">
+                        <div className="work__thumb">
+                            <img src={image} alt={title} className="work__img" />
                         </div>
-                    );
-                })}
+                        <div className="work__info">
+                            <span className="work__category">{category}</span>
+                            <h3 className="work__title">{title}</h3>
+                            <span className="work__link">
+                                View Project <i className="icon-arrow-right"></i>
+                            </span>
+                        </div>
+                    </a>
+                ))}
             </div>
         </section>
     );

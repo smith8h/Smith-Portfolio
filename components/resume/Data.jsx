@@ -29,7 +29,7 @@ const Data = [
         icon: "icon-briefcase",
         year: "Oct 2023 - Present",
         title: "Flutter App Developer",
-        desc: "",
+        desc: "Passionate Flutter developer building high-performance, cross-platform mobile applications with clean architecture and responsive UI design.",
     },
     {
         id: 5,
@@ -37,7 +37,15 @@ const Data = [
         icon: "icon-briefcase",
         year: "Jan 2024 - Precent",
         title: "Front-End Developer",
-        desc: "",
+        desc: "Creative Front-End developer specializing in building responsive and interactive web applications using modern frameworks and standard design principles.",
+    },
+    {
+        id: 6,
+        category: "experience",
+        icon: "icon-briefcase",
+        year: "Jan 2024 - Precent",
+        title: "Back-End Developer",
+        desc: "Dedicated Back-End developer experienced in designing scalable server-side logic, managing databases, and developing secure APIs to power high-performance web applications.",
     },
 ];
 

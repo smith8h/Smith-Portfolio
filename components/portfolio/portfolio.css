@@ -1,106 +1,118 @@
 .work__filters {
     display: flex;
     align-items: center;
-    column-gap: 1.5rem;
-    margin-bottom: 2rem;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
 }
 
-.work__item {
+.work__filter-btn {
+    font-family: var(--mono-font);
+    font-size: var(--small-font-size);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--text-secondary);
     cursor: pointer;
-    padding: 0.25rem 0.5rem;
-    font-weight: var(--font-bold);
-    transition: 0.3s;
+    transition: var(--transition);
 }
 
-.work__item:hover {
-    background-color: var(--first-color);
-    border-radius: 1.5rem;
-    color: white;
+.work__filter-btn:hover {
+    border-color: rgba(99, 102, 241, 0.3);
+    color: var(--accent-1);
+}
+
+.work__filter-btn--active {
+    background: var(--gradient-main) !important;
+    color: white !important;
+    border-color: transparent !important;
+    box-shadow: var(--glow-purple);
 }
 
 .work__container {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.75rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
 }
 
 .work__card {
-    position: relative;
     overflow: hidden;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.work__card:hover .work__img {
+    transform: scale(1.08);
+}
+
+.work__card:hover .work__link {
+    color: var(--accent-1);
+}
+
+.work__thumb {
+    overflow: hidden;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(99, 102, 241, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .work__img {
-    padding: 1.2rem 3rem;
-    height: 180px;
+    width: 60%;
+    max-height: 140px;
+    object-fit: contain;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.work__mask {
-    background: var(--first-color);
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: 0.3s;
+.work__info {
+    padding: 1.25rem;
 }
 
 .work__category {
-    color: white;
-    background-color: #f47061;
-    border-bottom-left-radius: 0.98rem;
-    border-bottom-right-radius: 0.98rem;
-    position: absolute;
-    top: 0;
-    left: 1rem;
-    font-size: var(--small-font-size);
-    display: inline-block;
-    padding: 0.19rem 0.625rem;
-    transform: translateY(-40px);
-    transition: 0.3s;
+    font-family: var(--mono-font);
+    font-size: var(--smaller-font-size);
+    color: var(--accent-cyan);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 .work__title {
-    color: #fff;
-    font-size: var(--h3-font-size);
-    margin: 0 0 0.98rem;
-    padding: 0 1.25rem;
-    position: absolute;
-    top: 2.5rem;
-    transform: translateY(30px);
-    transition: 0.3s;
-    opacity: 0;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semibold);
+    margin: 0.4rem 0;
+    color: var(--text-primary);
 }
 
-.work__button {
-    color: #fff;
-    position: absolute;
-    bottom: 1.5rem;
-    left: 1.5rem;
-    font-size: var(--h3-font-size);
-    display: block;
-    background-color: #ffd15c;
-    height: 40px;
-    width: 40px;
-    cursor: pointer;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 42px;
-    transition: 0.3s;
-    opacity: 0;
+.work__link {
+    font-size: var(--small-font-size);
+    color: var(--text-muted);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
 }
 
-.work__card:hover .work__button {
-    opacity: 1;
+/* ===== Responsive ===== */
+@media screen and (max-width: 768px) {
+    .work__container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
 }
 
-.work__card:hover .work__title,
-.work__card:hover .work__category {
-    opacity: 1;
-    transform: translateY(0);
-}
+@media screen and (max-width: 576px) {
+    .work__container {
+        grid-template-columns: 1fr;
+    }
 
-.work__card:hover .work__mask {
-    opacity: 0.9;
+    .work__filters {
+        gap: 0.5rem;
+    }
+
+    .work__filter-btn {
+        padding: 0.4rem 1rem;
+        font-size: var(--smaller-font-size);
+    }
 }

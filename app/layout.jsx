@@ -2,8 +2,8 @@ import "./globals.css";
 import Script from "next/script";
 
 export const metadata = {
-    title: "Smith - Portfolio",
-    description: "Hussein Shakir's personal portfolio - Mobile App and Web Front-End Developer",
+    title: "Hussein Shakir — Developer Portfolio",
+    description: "From Biotechnology to Code — Mobile App & Web Front-End Developer crafting digital experiences with passion.",
 };
 
 export default function RootLayout({ children }) {
@@ -14,6 +14,7 @@ export default function RootLayout({ children }) {
                     rel="stylesheet"
                     href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
                 />
+                <link rel="icon" href="/assets/logo.png" />
             </head>
             <body>
                 {children}
