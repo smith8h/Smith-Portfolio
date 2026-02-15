@@ -276,7 +276,6 @@
     .home {
         min-height: 110vh;
         /* Extra height to prevent overlap */
-        padding: 0 1rem;
         padding-bottom: 5rem;
     }
 

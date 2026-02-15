@@ -48,7 +48,7 @@ const Home = () => {
     }, []);
 
     return (
-        <section className="home container" id="home">
+        <section className="home" id="home">
             <div className="home__bg-shapes">
                 <div className="home__orb home__orb--1"></div>
                 <div className="home__orb home__orb--2"></div>
@@ -56,7 +56,7 @@ const Home = () => {
                 <div className="home__grid-lines"></div>
             </div>
 
-            <div className="intro section">
+            <div className="intro section container">
                 <div className="home__badge">
                     <span className="home__badge-dot"></span>
                     Available for freelance
