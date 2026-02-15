@@ -90,7 +90,7 @@ const Home = () => {
                     <a href="#contact" className="btn">
                         <i className="icon-bubble"></i> Hire Me
                     </a>
-                    <a href="/assets/hussein-shakir-resume.pdf" className="btn btn--outline" download>
+                    <a href="/assets/resume.pdf" className="btn btn--outline" download>
                         <i className="icon-cloud-download"></i> Resume
                     </a>
                 </div>

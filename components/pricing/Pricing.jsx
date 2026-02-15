@@ -65,7 +65,7 @@ const Pricing = () => {
                                 </li>
                             ))}
                         </ul>
-                        <a href="mailto:panolounisba2016@gmail.com" className={`btn ${plan.recommended ? "" : "btn--outline"}`}>
+                        <a href="mailto:husseinshakir81@gmail.com" className={`btn ${plan.recommended ? "" : "btn--outline"}`}>
                             Get Started
                         </a>
                     </div>

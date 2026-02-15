@@ -56,7 +56,7 @@ const About = () => {
                                 ❤️ I code for a hobby — I just love programming.
                             </p>
                         </div>
-                        <a href="/assets/hussein-shakir-resume.pdf" className="btn" download>
+                        <a href="/assets/resume.pdf" className="btn" download>
                             <i className="icon-cloud-download"></i> Download CV
                         </a>
                     </div>

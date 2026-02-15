@@ -62,8 +62,8 @@ const Contact = () => {
                     </h3>
                     <p className="contact__info-desc">
                         Don&apos;t like forms? Send me an email directly at{" "}
-                        <a href="mailto:panolounisba2016@gmail.com" className="contact__email gradient-text">
-                            panolounisba2016@gmail.com
+                        <a href="mailto:husseinshakir81@gmail.com" className="contact__email gradient-text">
+                            husseinshakir81@gmail.com
                         </a>
                     </p>
 
