@@ -8,8 +8,16 @@ const Data = [
         desc: "Biotechnology - Biology Department at the University of Mustansiriyah",
     },
     {
-        id: 2,
+        id: 7,
         category: "education",
+        icon: "icon-graduation",
+        year: "Jan 2019 - Present",
+        title: "Online & On-Site & Self-taught Courses",
+        desc: "Experienced Software Engineering: Continuous learning through various online and on-site platforms, mastering Android, Flutter, and Full-Stack Web Development.",
+    },
+    {
+        id: 2,
+        category: "experience",
         icon: "icon-briefcase",
         year: "Oct 2021 - Dec 2022",
         title: "Medical Analyst",
