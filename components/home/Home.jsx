@@ -59,7 +59,7 @@ const Home = () => {
             <div className="intro section container">
                 <div className="home__badge">
                     <span className="home__badge-dot"></span>
-                    Available for freelance
+                    Available for work
                 </div>
 
                 <div className="home__avatar-wrapper">

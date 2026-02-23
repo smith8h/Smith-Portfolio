@@ -2,7 +2,7 @@ import "./globals.css";
 import Script from "next/script";
 
 export const metadata = {
-    title: "Hussein Shakir — Developer Portfolio",
+    title: "Hussein Shakir | Software Engineer",
     description: "From Biotechnology to Code — Mobile App & Web Front-End Developer crafting digital experiences with passion.",
 };
 
