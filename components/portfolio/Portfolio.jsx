@@ -4,7 +4,7 @@ import { useState } from "react";
 import "./portfolio.css";
 import { Menu } from "./Menu";
 
-const categories = ["All", "Android", "Flutter", "Web"];
+const categories = ["All", "Apps", "Android", "Flutter", "Web"];
 
 const Portfolio = () => {
     const [activeFilter, setActiveFilter] = useState("All");
@@ -41,20 +41,28 @@ const Portfolio = () => {
             </div>
 
             <div className="work__container grid reveal">
-                {items.map(({ id, image, title, category, link }) => (
-                    <a href={link} className="work__card glass-card" key={id} target="_blank" rel="noopener noreferrer">
-                        <div className="work__thumb">
-                            <img src={image} alt={title} className="work__img" />
-                        </div>
-                        <div className="work__info">
-                            <span className="work__category">{category}</span>
-                            <h3 className="work__title">{title}</h3>
-                            <span className="work__link">
-                                View Project <i className="icon-arrow-right"></i>
-                            </span>
-                        </div>
-                    </a>
-                ))}
+                {items.map(({ id, image, title, category, link }) => {
+                    const external = link.startsWith("http");
+                    return (
+                        <a
+                            href={link}
+                            className="work__card glass-card"
+                            key={id}
+                            {...(external && { target: "_blank", rel: "noopener noreferrer" })}
+                        >
+                            <div className="work__thumb">
+                                <img src={image} alt={title} className="work__img" />
+                            </div>
+                            <div className="work__info">
+                                <span className="work__category">{category}</span>
+                                <h3 className="work__title">{title}</h3>
+                                <span className="work__link">
+                                    View Project <i className="icon-arrow-right"></i>
+                                </span>
+                            </div>
+                        </a>
+                    );
+                })}
             </div>
         </section>
     );

@@ -18,7 +18,7 @@ const About = () => {
                         <div className="about__img-border"></div>
                     </div>
                     <div className="about__experience-badge">
-                        <span className="about__exp-number">5+</span>
+                        <span className="about__exp-number">6+</span>
                         <span className="about__exp-text">Years of<br />Experience</span>
                     </div>
                 </div>
