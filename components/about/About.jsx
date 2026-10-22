@@ -51,6 +51,11 @@ const About = () => {
                                 <span className="tag">Android</span>
                                 <span className="tag">ASP.Net</span>
                                 <span className="tag">.NET Core API</span>
+                                <span className="tag">AI Engineering</span>
+                                <span className="tag">Machine Learning</span>
+                                <span className="tag">LLM APIs</span>
+                                <span className="tag">Prompt Engineering</span>
+                                <span className="tag">RAG</span>
                             </div>
                             <p className="about__description">
                                 I&apos;m also developing <b>AI engineering skills at intern level</b>,
@@ -78,18 +83,23 @@ const About = () => {
                                 { name: "JavaScript / React", percent: 80, color: "var(--accent-1)" },
                                 { name: "Python", percent: 65, color: "var(--accent-green)" },
                                 { name: ".NET Core API", percent: 75, color: "var(--accent-2)" },
+                                { name: "AI Engineering / Machine Learning", level: "Intern level" },
+                                { name: "NumPy / pandas / scikit-learn", level: "Intern level" },
+                                { name: "LLM APIs / Prompt Engineering", level: "Intern level" },
+                                { name: "RAG / Embeddings / Vector Search", level: "Intern level" },
+                                { name: "Model Evaluation / Responsible AI", level: "Intern level" },
                             ].map((skill) => (
                                 <div className="skills__data" key={skill.name}>
                                     <div className="skills__titles">
                                         <h4 className="skills__name">{skill.name}</h4>
-                                        <span className="skills__number">{skill.percent}%</span>
+                                        <span className="skills__number">{skill.level || `${skill.percent}%`}</span>
                                     </div>
-                                    <div className="skills__bar">
+                                    {skill.percent != null && <div className="skills__bar">
                                         <span
                                             className="skills__percentage"
                                             style={{ width: `${skill.percent}%`, background: skill.color }}
                                         ></span>
-                                    </div>
+                                    </div>}
                                 </div>
                             ))}
                         </div>

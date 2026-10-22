@@ -1,7 +1,7 @@
 export const Menu = [
     {
         id: 17,
-        image: "/assets/swallet.svg",
+        image: "/assets/swallet.png",
         title: "SWallet - Credit/Debit cards",
         category: "Apps",
         link: "https://play.google.com/store/apps/details?id=smith.app.swallet",
@@ -12,7 +12,8 @@ export const Menu = [
         image: "/assets/wave.png",
         title: "Wave: Offline Music Player",
         category: "Apps",
-        link: "/wave/privacy",
+        link: "https://play.google.com/store/apps/details?id=smith.app.wavemusic",
+        privacyPolicy: "/wave/privacy",
     },
     {
         id: 1,

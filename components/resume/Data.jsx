@@ -1,5 +1,13 @@
 const Data = [
     {
+        id: 8,
+        category: "education",
+        icon: "icon-graduation",
+        year: "Ongoing learning",
+        title: "AI Engineering - Intern Level",
+        desc: "Developing skills in Python for AI, NumPy, pandas, data preparation, machine learning with scikit-learn, LLM API integration, prompt engineering, embeddings, vector search, retrieval-augmented generation (RAG), model evaluation, and responsible AI.",
+    },
+    {
         id: 3,
         category: "education",
         icon: "icon-graduation",
