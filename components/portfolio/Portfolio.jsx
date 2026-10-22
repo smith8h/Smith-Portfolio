@@ -41,23 +41,29 @@ const Portfolio = () => {
             </div>
 
             <div className="work__container grid reveal">
-                {items.map(({ id, image, title, category, link, privacyPolicy }) => (
-                    <article className="work__card glass-card" key={id}>
-                        <a href={link} target="_blank" rel="noopener noreferrer">
-                        <div className="work__thumb">
-                            <img src={image} alt={title} className="work__img" />
-                        </div>
-                        <div className="work__info">
-                            <span className="work__category">{category}</span>
-                            <h3 className="work__title">{title}</h3>
-                            <span className="work__link">
-                                {category === "Apps" ? "View on Google Play" : "View Project"} <i className="icon-arrow-right"></i>
-                            </span>
-                        </div>
-                        </a>
-                        {privacyPolicy && <a className="work__privacy" href={privacyPolicy}>Privacy Policy</a>}
-                    </article>
-                ))}
+                {items.map(({ id, image, title, category, link, privacyPolicy }) => {
+                    const external = link.startsWith("http");
+                    const label = link.includes("play.google.com/")
+                        ? "View on Google Play"
+                        : link === "/wave/privacy" ? "Privacy Policy" : "View Project";
+                    return (
+                        <article className="work__card glass-card" key={id}>
+                            <a href={link} {...(external && { target: "_blank", rel: "noopener noreferrer" })}>
+                                <div className="work__thumb">
+                                    <img src={image} alt={title} className="work__img" />
+                                </div>
+                                <div className="work__info">
+                                    <span className="work__category">{category}</span>
+                                    <h3 className="work__title">{title}</h3>
+                                    <span className="work__link">
+                                        {label} <i className="icon-arrow-right"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            {privacyPolicy && <a className="work__privacy" href={privacyPolicy}>Privacy Policy</a>}
+                        </article>
+                    );
+                })}
             </div>
         </section>
     );
