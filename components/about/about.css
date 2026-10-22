@@ -107,6 +107,12 @@
     row-gap: 1.25rem;
 }
 
+.about__ai-learning {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: var(--border-subtle);
+}
+
 .skills__titles {
     display: flex;
     justify-content: space-between;

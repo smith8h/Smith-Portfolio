@@ -6,6 +6,15 @@
     flex-wrap: wrap;
 }
 
+.work__privacy {
+    display: inline-block;
+    margin: 0 1.25rem 1.25rem;
+    color: var(--accent-cyan);
+    font-size: var(--small-font-size);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
 .work__filter-btn {
     font-family: var(--mono-font);
     font-size: var(--small-font-size);

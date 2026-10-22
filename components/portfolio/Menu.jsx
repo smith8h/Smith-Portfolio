@@ -1,5 +1,13 @@
 export const Menu = [
     {
+        id: 17,
+        image: "/assets/swallet.svg",
+        title: "SWallet - Credit/Debit cards",
+        category: "Apps",
+        link: "https://play.google.com/store/apps/details?id=smith.app.swallet",
+        privacyPolicy: "/swallet/privacy-policy",
+    },
+    {
         id: 1,
         image: "/assets/text.svg",
         title: "STextView Android Library",

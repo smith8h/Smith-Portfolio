@@ -52,6 +52,11 @@ const About = () => {
                                 <span className="tag">ASP.Net</span>
                                 <span className="tag">.NET Core API</span>
                             </div>
+                            <p className="about__description">
+                                I&apos;m also developing <b>AI engineering skills at intern level</b>,
+                                building on my Python background to learn how to prepare data,
+                                work with machine learning models, and integrate AI into applications.
+                            </p>
                             <p className="about__description about__hobby">
                                 ❤️ I code for a hobby — I just love programming.
                             </p>
@@ -87,6 +92,31 @@ const About = () => {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+                        <div className="about__ai-learning">
+                            <h3 className="about__skills-title">
+                                <span className="gradient-text">AI Engineering</span> — Intern Level
+                            </h3>
+                            <p className="about__description">
+                                Currently learning and practicing:
+                            </p>
+                            <div className="about__tags" aria-label="AI engineering learning topics">
+                                {[
+                                    "Python for AI",
+                                    "NumPy & pandas",
+                                    "Data Preparation",
+                                    "Machine Learning Fundamentals",
+                                    "scikit-learn",
+                                    "LLM API Integration",
+                                    "Prompt Engineering",
+                                    "Embeddings & Vector Search",
+                                    "Retrieval-Augmented Generation (RAG)",
+                                    "Model Evaluation",
+                                    "Responsible AI & Data Privacy",
+                                ].map((topic) => (
+                                    <span className="tag" key={topic}>{topic}</span>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>

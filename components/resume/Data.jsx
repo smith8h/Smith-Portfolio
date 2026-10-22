@@ -13,7 +13,7 @@ const Data = [
         icon: "icon-graduation",
         year: "Jan 2019 - Present",
         title: "Online & On-Site & Self-taught Courses",
-        desc: "Experienced Software Engineering: Continuous learning through various online and on-site platforms, mastering Android, Flutter, and Full-Stack Web Development.",
+        desc: "Continuous learning through online, on-site, and self-taught courses in Android, Flutter, and Full-Stack Web Development. Expanding into intern-level AI engineering with Python, data preparation, machine learning fundamentals, LLM APIs, prompt engineering, RAG, and model evaluation.",
     },
     {
         id: 2,
