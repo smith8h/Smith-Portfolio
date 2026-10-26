@@ -1,13 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    images: {
-        remotePatterns: [
-            {
-                protocol: 'https',
-                hostname: 'te.legra.ph',
-            },
-        ],
-    },
-};
+const nextConfig = {};
 
 export default nextConfig;

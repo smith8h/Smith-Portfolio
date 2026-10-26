@@ -1,3 +1,4 @@
+import "@/styles/policy.css";
 import "./privacy.css";
 
 const EFFECTIVE_DATE = "October 10, 2026";
@@ -29,12 +30,12 @@ const permissions = [
 
 export default function WavePrivacyPage() {
     return (
+        <div className="policy-page">
         <div className="privacy">
-            <div className="noise-overlay"></div>
 
             <header className="privacy__header">
                 <a href="/" className="privacy__back">
-                    <i className="icon-arrow-left"></i> Back to portfolio
+                    &larr; Back to portfolio
                 </a>
 
                 <div className="privacy__brand">
@@ -154,6 +155,7 @@ export default function WavePrivacyPage() {
             </main>
 
             <footer className="privacy__footer">&copy; 2026 Hussein Shakir</footer>
+        </div>
         </div>
     );
 }

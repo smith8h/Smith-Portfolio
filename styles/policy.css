@@ -1,0 +1,67 @@
+/* Shared base for the app privacy pages.
+   Maps the older token names those pages use onto each design's tokens,
+   so the policies follow whichever design and theme is active. */
+.policy-page {
+    --text-primary: var(--text);
+    --text-secondary: var(--text-2);
+    --text-muted: var(--text-3);
+    --accent-1: var(--accent);
+    --accent-cyan: var(--accent);
+    --mono-font: var(--font-mono);
+    --h1-font-size: clamp(2rem, 5vw, 3rem);
+    --h2-font-size: clamp(1.5rem, 3.5vw, 2rem);
+    --h3-font-size: 1.2rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.78rem;
+    --font-semibold: 600;
+    --border-radius: 16px;
+    --border-subtle: 1px solid var(--line);
+    --border-glow: 1px solid var(--accent);
+    --transition: color 0.2s ease, background-color 0.2s ease;
+
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text-2);
+    line-height: 1.7;
+}
+
+.policy-page .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.policy-page .section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.policy-page .section__subtitle {
+    display: block;
+    margin-bottom: 2rem;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--accent);
+}
+
+.policy-page h1,
+.policy-page h2,
+.policy-page h3 {
+    color: var(--text);
+    line-height: 1.25;
+}
+
+.policy-page .glass-card {
+    background: var(--surface);
+    border-radius: 16px;
+}
+
+.policy-page .gradient-text {
+    color: var(--accent);
+}
+
+.policy-page a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
