@@ -1,5 +1,12 @@
 export const Menu = [
     {
+        id: 27,
+        image: "/assets/port.svg",
+        title: "PC Cooler Monitor Driver",
+        category: "Desktop",
+        link: "https://github.com/smith8h/pc-cooler-monitor-driver",
+    },
+    {
         id: 17,
         image: "/assets/swallet.png",
         title: "SWallet - Credit/Debit cards",

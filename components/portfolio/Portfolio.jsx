@@ -4,7 +4,7 @@ import { useState } from "react";
 import "./portfolio.css";
 import { Menu } from "./Menu";
 
-const categories = ["All", "Apps", "Android", "Flutter", "Web"];
+const categories = ["All", "Apps", "Android", "Flutter", "Web", "Desktop"];
 
 const Portfolio = () => {
     const [activeFilter, setActiveFilter] = useState("All");
