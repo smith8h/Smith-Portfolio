@@ -2,11 +2,18 @@ import Link from "next/link";
 import CodeHero from "@/components/terminal/CodeHero";
 import Contact from "@/components/terminal/Contact";
 import Icon from "@/components/shared/Icon";
-import { featuredProjects, posts, pricing, profile, projects, services } from "@/lib/content";
+import { featuredProjects, posts as fallbackPosts, pricing, profile, projects, services } from "@/lib/content";
+import { CHANNEL, getLatestPosts } from "@/lib/telegram";
+
+// Re-fetch the Telegram posts at most every 30 minutes.
+export const revalidate = 1800;
 
 const commitType = { Flutter: "feat(flutter)", Android: "chore(android)", Libraries: "docs(libs)" };
+const postType = (p) => commitType[p.category] || (p.tag ? `post(${p.tag})` : "post");
 
-export default function Home() {
+export default async function Home() {
+    const posts = (await getLatestPosts(5)) || fallbackPosts;
+
     return (
         <>
             <section className="hero" aria-labelledby="hero-title">
@@ -140,8 +147,8 @@ export default function Home() {
                     <h2 id="posts-title" className="sec__title">
                         <span className="tk-c">#</span> Notes from Telegram
                     </h2>
-                    <a href="https://t.me/smithdev" target="_blank" rel="noopener noreferrer" className="ulink">
-                        t.me/smithdev
+                    <a href={`https://t.me/${CHANNEL}`} target="_blank" rel="noopener noreferrer" className="ulink">
+                        t.me/{CHANNEL}
                     </a>
                 </div>
                 <ul className="gitlog">
@@ -154,8 +161,10 @@ export default function Home() {
                                 <time dateTime={p.date} className="tk-n">
                                     {p.date}
                                 </time>
-                                <span className="tk-k">{commitType[p.category] || "post"}:</span>
-                                <span className="gitlog__msg">{p.title}</span>
+                                <span className="tk-k">{postType(p)}:</span>
+                                <span className="gitlog__msg" dir="auto">
+                                    {p.title}
+                                </span>
                             </a>
                         </li>
                     ))}

@@ -147,7 +147,7 @@ export default function Shell({ children }) {
                 </main>
                 <footer className="footer">
                     <p>
-                        © {profile.since}–{new Date().getFullYear()} {profile.name}. Built with Next.js.
+                        © {profile.since}–{new Date().getFullYear()} {profile.name}. Built in Baghdad, Iraq.
                     </p>
                     <p>
                         <a href={`mailto:${profile.email}`}>{profile.email}</a>
