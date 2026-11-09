@@ -9,6 +9,9 @@ export const metadata = {
     title: "Hussein Shakir · Mobile and web developer",
     description:
         "Biotechnologist turned software engineer. Android, Flutter and front-end web apps, plus a dozen open-source libraries.",
+    verification: {
+        google: "7i6mawecODs8VGQqWAzZ-1iyFZnPC46Q9oHXB8Nci0E",
+    },
 };
 
 export const viewport = {
